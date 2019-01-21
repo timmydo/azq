@@ -7,7 +7,7 @@ COPY go.mod .
 # https://github.com/golang/go/issues/27925 https://github.com/golang/go/issues/29278
 #COPY go.sum .
 RUN go mod download
-COPY main.go .
+COPY azq.go .
 RUN CGO_ENABLED=0 go build -o /go/bin/app
 
 
